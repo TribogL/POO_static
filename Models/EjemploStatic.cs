@@ -7,17 +7,17 @@ namespace POO_static.Models
 {
     public class EjemploStatic
     {
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public EjemploStatic()
+        public static string Nombre { get; set; }
+        public static string Apellido { get; set; }
+        static EjemploStatic()
         {
-            this.Nombre = "Julian";
-            this.Apellido = "Forero";
+            Nombre = "Julian";
+            Apellido = "Forero";
         }
 
-        public void Saludar()
+        public static void Saludar()
         {
-            Console.WriteLine($"Hola a todos soy: {Nombre}{Apellido}");
+            Console.WriteLine($"Hola a todos soy: {Nombre} {Apellido}");
         }
     }
 }
